@@ -64,7 +64,6 @@ img {
 /* Link  |  Cursor | Flex */
 
 .cursor {
-  transition: background-color 250ms var(--timing-function);
   transition: color 250ms var(--timing-function);
 }
 
