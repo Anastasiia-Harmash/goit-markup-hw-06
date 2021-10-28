@@ -181,6 +181,7 @@ img {
 /* Auth-nav  */
 .auth-nav {
   display: flex;
+  align-items: center;
   margin-left: auto;
 }
 
@@ -193,6 +194,9 @@ img {
 }
 
 .auth-nav-link {
+  display: flex;
+  align-items: center;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -628,19 +632,28 @@ img {
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
+
+  transition: border 250ms var(--timing-function),
+    fill 250ms var(--timing-function);
+}
+
+.modal-button:hover {
+  border: 1px solid var(--accent-text-color);
+  fill: var(--accent-text-color);
 }
 
 /* Form */
 
 .form {
-  margin: 40px 39px 41px 40px;
+  padding: 40px 40px 40px 40px;
+  display: block;
 
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
 }
 
 .modal-titel {
-  margin-bottom: 2px;
+  margin-bottom: 12px;
 
   font-weight: 700;
   font-size: 20px;
@@ -652,12 +665,11 @@ img {
 }
 
 .modal-form {
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 10px;
 }
 
 .modal-label {
-  margin-top: 10px;
+  display: block;
   margin-bottom: 4px;
 
   font-size: 12px;
@@ -665,6 +677,10 @@ img {
   letter-spacing: 0.01em;
 
   color: var(--primary-text-color);
+}
+
+.modal-comment {
+  margin-bottom: 20px;
 }
 
 .inpyt-wrapper {
@@ -711,6 +727,8 @@ img {
 }
 
 .textarea::placeholder {
+  display: block;
+
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
@@ -724,7 +742,6 @@ img {
   letter-spacing: 0.03em;
   text-align: center;
 
-  margin-top: 20px;
   margin-bottom: 30px;
 
   color: var(--primary-text-color);
@@ -781,6 +798,7 @@ img {
 
   color: var(--white-color);
   background-color: var(--accent-text-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* Footer */
@@ -796,9 +814,7 @@ img {
 }
 
 .footer-nav-box {
-  /* display: block;
-  margin: 0px;
-  margin-bottom: 20px; */
+  flex-grow: 1;
   margin-right: 70px;
 }
 
@@ -846,7 +862,6 @@ img {
 
 .footer-form {
   margin-left: 93px;
-  margin-right: 12px;
   display: flex;
   flex-direction: column;
 }
@@ -878,7 +893,7 @@ img {
 }
 
 .button-footer {
-  position: relative;
+  align-items: center;
   margin-left: 12px;
 
   padding-top: 10px;
@@ -975,9 +990,9 @@ img {
   color: var(--title-text-color);
   background-color: var(--background);
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms var(--timing-function),
+    background-color 250ms var(--timing-function),
+    box-shadow 250ms var(--timing-function);
 }
 
 .portfolio-button:hover,
